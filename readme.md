@@ -1,6 +1,21 @@
 # 3KLES -COREBE
 
-This package contains interface and class to create Express Application
+## Introduction
+
+3KLES-CoreBE provides generic classes and interfaces to quickly bootstrap an Express backend.
+This package exposes base implementations for applications, routers, controllers and services.
+
+### Exemple minimal
+
+```ts
+import { GenericApp, GenericRouter } from '@3kles/3kles-corebe';
+
+const router = new GenericRouter();
+const app = new GenericApp();
+
+app.setMainRouter(router);
+app.startApp(3000);
+```
 
 ## API
 
@@ -44,3 +59,11 @@ In this module there is a class **HttpApi** that implement **IGenericApi** to ma
 
 - **execute**: Method to execute request from parameters
 - **getServiceParams**: Method to get service parameters
+
+## Installation
+
+```bash
+npm install
+npm run build
+npm run dev
+```
